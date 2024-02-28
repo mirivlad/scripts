@@ -63,6 +63,10 @@ echo "server {
     server_name $domain;
     root /var/www/$domain;
     index index.php index.html index.htm;
+    
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
     location ~ \.php$ {
         fastcgi_pass unix:/run/php/php$PHP_VER-fpm_$CUR_USER.sock;
         fastcgi_index index.php;
