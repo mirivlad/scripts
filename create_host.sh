@@ -46,7 +46,7 @@ echo "Генерируем конфигурационный файл php-fpm"
 echo "[$domain]
 user = $CUR_USER
 group = $CUR_USER
-listen = /run/php/php$PHP_VER-fpm_$CUR_USER.sock
+listen = /run/php/php$PHP_VER-fpm_$domain.sock
 listen.owner = www-data
 listen.group = www-data
 listen.mode=0660
