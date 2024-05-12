@@ -21,7 +21,7 @@ fi
 
 if ! command -v php > /dev/null; then
     echo "Установка php-fpm..."
-    sudo apt-get install php-fpm -y
+    sudo apt-get install php php-bcmath php-bz2 php-common php-curl php-fpm php-gd php-imagick php-intl php-mbstring php-mcrypt php-mysql php-opcache php-xml php-xmlrpc php-xsl php-yaml php-zip -y
 fi
 
 if ! command -v mysql > /dev/null; then
