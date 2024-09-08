@@ -65,7 +65,7 @@ echo "server {
     index index.php index.html index.htm;
     
     location / {
-        try_files $uri $uri/ /index.php$is_args$args;
+        try_files \$uri \$uri/ /index.php\$is_args\$args;
     }
     location ~ \.php$ {
         fastcgi_pass unix:/run/php/php$PHP_VER-fpm_$domain.sock;
