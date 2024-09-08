@@ -26,7 +26,7 @@ fi
 
 if ! command -v mysql > /dev/null; then
     echo "Установка mysql..."
-    sudo apt-get install mysql-server -y
+    sudo apt-get install mariadb-server -y
 fi
 
 PHP_VER="$(php -v | head -n 1 | cut -d " " -f 2 | cut -f1-2 -d".")"
